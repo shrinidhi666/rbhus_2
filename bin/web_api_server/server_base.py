@@ -1,17 +1,21 @@
 import setproctitle
 import sys
-import cherrypy
+from flask import Flask
+from flask import request
 import psutil
 import simplejson
+import  multiprocessing
 
+app = Flask(__name__)
 setproctitle.setproctitle("web_api_server")
 
 
-class web_api(object):
-  @cherrypy.expose
-  def ping(self):
-    return "alive"
+@app.route("/ping")
+def ping():
+  return "alive"
 
+
+def process(**kwargs)
 
 if (__name__ == '__main__'):
-  cherrypy.quickstart(web_api())
+  app.run()
