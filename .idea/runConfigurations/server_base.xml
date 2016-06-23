@@ -11,7 +11,7 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <module name="rbhus" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/web_api_server/server_base.py" />
+    <option name="SCRIPT_NAME" value="C:\CRAP\codungs\rbhus_2\bin\web_api_server\web_api_server.py" />
     <option name="PARAMETERS" value="" />
     <option name="SHOW_COMMAND_LINE" value="true" />
     <method />

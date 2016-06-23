@@ -28,14 +28,19 @@ class get_connection():
         time.sleep(1)
 
 
-  def execute(self,query):
+  def execute(self,query,dictionary=False):
     while(True):
+      rows = None
       try:
         cur = self.__conn.cursor()
         cur.execute(query)
-        rows = cur.fetchall()
+        if(dictionary):
+          rows = cur.fetchall()
         cur.close()
-        return(rows)
+        if(rows):
+          return(rows)
+        else:
+          return(1)
       except:
         print (str(sys.exc_info()))
         time.sleep(1)
@@ -49,7 +54,7 @@ class get_connection():
 
 if(__name__=='__main__'):
   test_conn = get_connection()
-  rows = test_conn.execute("select * from host_types")
+  rows = test_conn.execute("select * from host_types",dictionary=True)
   print (rows)
 
 
