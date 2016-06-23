@@ -5,7 +5,7 @@ from flask import request
 import psutil
 import simplejson
 import  multiprocessing
-import ../../lib.db.rbhus
+
 app = Flask(__name__)
 setproctitle.setproctitle("web_api_server")
 
