@@ -18,10 +18,14 @@ app = Flask(__name__)
 setproctitle.setproctitle("web_api_server")
 
 
-@app.route("/ping")
+@app.route("/")
 def ping():
-
-  return process()
+  details = {}
+  details['cpu_usage'] = psutil.cpu_percent(interval=1,percpu=True)
+  details['memory'] = {'ram': psutil.virtual_memory(),'swap': psutil.swap_memory()}
+  disk_partitions = psutil.disk_partitions()
+  print(disk_partitions)
+  return(simplejson.dumps(details))
 
 
 def process(**kwargs):
