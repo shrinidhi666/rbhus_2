@@ -13,7 +13,7 @@ from flask import request
 import psutil
 import simplejson
 import  multiprocessing
-import lib.db.rbhus_hosts
+import lib.db.rbhus_render
 app = Flask(__name__)
 setproctitle.setproctitle("web_api_server")
 
@@ -29,7 +29,7 @@ def ping():
 
 
 def process(**kwargs):
-  db_con = lib.db.rbhus_hosts.get_connection()
+  db_con = lib.db.rbhus_render.get_connection()
   rows = db_con.execute("select * from host_types",dictionary=True)
   return(simplejson.dumps(rows))
 

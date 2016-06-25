@@ -58,6 +58,6 @@ class get_connection_base(object):
       print (str(sys.exc_info()))
 
 if(__name__=='__main__'):
-  test_conn = get_connection_base(database="rbhus",user="postgres",password="123",host="127.0.0.1",port="5432")
-  rows = test_conn.execute("select * from host_types",dictionary=True)
+  test_conn = get_connection_base(database="rbhus_render",user="postgres",password="123",host="127.0.0.1",port="5432")
+  rows = test_conn.execute("select * from host_details",dictionary=True)
   print (rows)
