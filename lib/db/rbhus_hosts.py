@@ -20,7 +20,7 @@ class get_connection():
   def __connect(self):
     while(True):
       try:
-        conn = psycopg2.connect(database="rbhus",
+        conn = psycopg2.connect(database="rbhus_hosts",
                                        user="postgres",
                                        password="123",
                                        host="127.0.0.1",
