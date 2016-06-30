@@ -29,33 +29,39 @@ class get_connection_base(object):
         print("Opened database successfully")
         return (conn)
       except:
-        print (str(sys.exc_info()))
+        errstr = str(sys.exc_info())
+        print(errstr)
+        if(errstr.find("Connection refused") >= 0):
+          return(False)
+          break
         time.sleep(1)
 
 
   def execute(self,query,dictionary=False):
-    while(True):
-      rows = None
-      try:
-        cur = self.__conn.cursor()
-        cur.execute(query)
-        if(dictionary):
-          rows = cur.fetchall()
-        cur.close()
-        if(rows):
-          return(rows)
-        else:
-          return(1)
-      except:
-        print (str(sys.exc_info()))
-        time.sleep(1)
+    if(self.__conn):
+      while(True):
+        rows = None
+        try:
+          cur = self.__conn.cursor()
+          cur.execute(query)
+          if(dictionary):
+            rows = cur.fetchall()
+          cur.close()
+          if(rows):
+            return(rows)
+          else:
+            return(1)
+        except:
+          print (str(sys.exc_info()))
+          time.sleep(1)
 
   def __del__(self):
-    try:
-      self.__conn.close()
-      print ("Closed database connection")
-    except:
-      print (str(sys.exc_info()))
+    if(self.__conn):
+      try:
+        self.__conn.close()
+        print ("Closed database connection")
+      except:
+        print (str(sys.exc_info()))
 
 if(__name__=='__main__'):
   test_conn = get_connection_base(database="rbhus_render",user="postgres",password="123",host="127.0.0.1",port="5432")

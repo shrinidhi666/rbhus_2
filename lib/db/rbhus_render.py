@@ -22,8 +22,9 @@ class get_connection(lib.db.base.get_connection_base):
 
 if(__name__=='__main__'):
   test_conn = get_connection()
-  rows = test_conn.execute("select * from host_types",dictionary=True)
-  print (rows)
+  if(test_conn):
+    rows = test_conn.execute("select * from host_types",dictionary=True)
+    print (rows)
 
 
 
