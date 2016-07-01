@@ -4,16 +4,16 @@ __author__ = "Shrinidhi Rao"
 __license__ = "GPL"
 __email__ = "shrinidhi666@gmail.com"
 
+import os
 import sys
-sys.path.append("../../")
+
+sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
 import setproctitle
 
 from flask import Flask
-from flask import request
 import psutil
 import simplejson
-import  multiprocessing
-import lib.db.rbhus_render
+
 app = Flask(__name__)
 setproctitle.setproctitle("web_api_server")
 
@@ -21,17 +21,15 @@ setproctitle.setproctitle("web_api_server")
 @app.route("/")
 def ping():
   details = {}
-  details['cpu_usage'] = psutil.cpu_percent(interval=1,percpu=True)
+  details['cpu_usage_all'] = psutil.cpu_percent(interval=1,percpu=True)
+  details['cpu_usage'] = psutil.cpu_percent(interval=1)
   details['memory'] = {'ram': psutil.virtual_memory(),'swap': psutil.swap_memory()}
-  disk_partitions = psutil.disk_partitions()
-  print(disk_partitions)
+  if(sys.platform.lower().find("linux") >= 0):
+    details['loadavg'] = os.getloadavg()
+  details['disk'] = psutil.disk_partitions()
   return(simplejson.dumps(details))
 
 
-def process(**kwargs):
-  db_con = lib.db.rbhus_render.get_connection()
-  rows = db_con.execute("select * from host_types",dictionary=True)
-  return(simplejson.dumps(rows))
 
 if (__name__ == '__main__'):
-  app.run()
+  app.run(port=8888, request_handler=CustomRequestHandler)
