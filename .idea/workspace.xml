@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fce3e414-a79a-4434-b0a4-4833f8e94633" name="Default" comment="protoyping">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/daemons/default/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/daemons/rbhus_infra/rbhus_infra_api_server.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/__init__.py" afterPath="$PROJECT_DIR$/daemons/web_api_server/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/default/__init__.py" afterPath="$PROJECT_DIR$/daemons/rbhus_infra/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/rbhus_infra/__init__.py" afterPath="$PROJECT_DIR$/daemons/default/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/rbhus_infra/rbhus_infra_api_server.py" afterPath="$PROJECT_DIR$/daemons/default/host_updater.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/web_api_server/__init__.py" afterPath="$PROJECT_DIR$/daemons/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/web_api_server/host_control.py" afterPath="$PROJECT_DIR$/daemons/web_api_server/host_control.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/rbhus_infra/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/daemons/web_api_server/__init__.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/daemons/default/host_updater.py" afterPath="$PROJECT_DIR$/daemons/default/host_details_updater.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/daemons/web_api_server/host_control.py" afterPath="$PROJECT_DIR$/daemons/default/host_control_api_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rbhus_2.iws" />
@@ -31,44 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rbhus_render.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/db/rbhus_render.py">
+      <file leaf-file-name="host_control_api_server.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
                 <element signature="e#135#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rbhus_infra.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/db/rbhus_infra.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#135#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/db/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <element signature="e#135#145#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/__init__.py">
+        <entry file="file://$PROJECT_DIR$/lib/rbhus_infra/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -77,13 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="host_control.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+      <file leaf-file-name="rbhus_infra_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/db/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-323">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
-                <element signature="e#135#144#0" expanded="true" />
+                <element signature="e#135#145#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,14 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="host_updater.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daemons/default/host_updater.py">
+      <file leaf-file-name="host_details_updater.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daemons/default/host_details_updater.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="74" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="74" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#136#146#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daemons/rbhus_infra/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/daemons/default/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -148,6 +141,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="UML Activity" />
         <option value="Python Script" />
       </list>
     </option>
@@ -183,6 +177,11 @@
         <option value="$PROJECT_DIR$/bin/rbhus_infra/__init__.py" />
         <option value="$PROJECT_DIR$/bin/rbhus_infra/rbhus_infra_api_server.py" />
         <option value="$PROJECT_DIR$/daemons/default/readme.txt" />
+        <option value="$PROJECT_DIR$/daemons/default/host_updater.py" />
+        <option value="$PROJECT_DIR$/daemons/rbhus_infra/readme.txt" />
+        <option value="$PROJECT_DIR$/lib/rbhus_infra/__init__.py" />
+        <option value="$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py" />
+        <option value="$PROJECT_DIR$/daemons/default/host_control_api_server.py" />
       </list>
     </option>
   </component>
@@ -264,39 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rbhus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rbhus_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="daemons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rbhus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rbhus_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daemons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web_api_server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,11 +317,14 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CRAP\codungs\rbhus_2\daemons\default" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\CRAP\codungs\rbhus_2\lib\db" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.host_control">
+  <component name="RunManager" selected="Python.host_control_api_server">
     <configuration default="false" name="web_api_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -368,23 +338,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rbhus_2" />
       <option name="SCRIPT_NAME" value="C:\CRAP\codungs\rbhus_2\bin\web_api_server\host_control.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="base" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/db" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="rbhus_2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/db/base.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -436,6 +389,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rbhus_2" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/web_api_server/host_control.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="host_control_api_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/daemons/default" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rbhus_2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/daemons/default/host_control_api_server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -578,18 +548,18 @@
       <item index="0" class="java.lang.String" itemvalue="Python.lib.db.render" />
       <item index="1" class="java.lang.String" itemvalue="Python.server_base" />
       <item index="2" class="java.lang.String" itemvalue="Python.web_api_server" />
-      <item index="3" class="java.lang.String" itemvalue="Python.base" />
-      <item index="4" class="java.lang.String" itemvalue="Python.rbhus_render" />
-      <item index="5" class="java.lang.String" itemvalue="Python.host_details" />
-      <item index="6" class="java.lang.String" itemvalue="Python.host_control" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rbhus_render" />
+      <item index="4" class="java.lang.String" itemvalue="Python.host_details" />
+      <item index="5" class="java.lang.String" itemvalue="Python.host_control" />
+      <item index="6" class="java.lang.String" itemvalue="Python.host_control_api_server" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.host_control" />
-        <item index="1" class="java.lang.String" itemvalue="Python.host_details" />
-        <item index="2" class="java.lang.String" itemvalue="Python.web_api_server" />
-        <item index="3" class="java.lang.String" itemvalue="Python.rbhus_render" />
-        <item index="4" class="java.lang.String" itemvalue="Python.base" />
+        <item index="0" class="java.lang.String" itemvalue="Python.host_control_api_server" />
+        <item index="1" class="java.lang.String" itemvalue="Python.host_control" />
+        <item index="2" class="java.lang.String" itemvalue="Python.host_details" />
+        <item index="3" class="java.lang.String" itemvalue="Python.web_api_server" />
+        <item index="4" class="java.lang.String" itemvalue="Python.rbhus_render" />
       </list>
     </recent_temporary>
   </component>
@@ -768,7 +738,21 @@
       <option name="project" value="LOCAL" />
       <updated>1467779423919</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="protoyping">
+      <created>1467780490481</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1467780490481</updated>
+    </task>
+    <task id="LOCAL-00025" summary="protoyping">
+      <created>1467781705679</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1467781705679</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -782,10 +766,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18443497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18443497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22318527" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -825,34 +809,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/db/rbhus_render.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#135#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/db/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/db/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-          <folding>
-            <element signature="e#135#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/daemons/web_api_server/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -861,7 +817,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
@@ -897,7 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -933,7 +889,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -969,7 +925,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1005,7 +961,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
@@ -1041,7 +997,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1077,7 +1033,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -1113,7 +1069,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -1149,7 +1105,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -1198,16 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/db/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#135#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/db/rbhus_infra.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1236,31 +1182,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/web_api_server/host_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding>
-            <element signature="e#135#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/daemons/rbhus_infra/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daemons/default/host_updater.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="74" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="74" />
-          <folding>
-            <element signature="e#136#146#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1279,6 +1205,60 @@
         <state relative-caret-position="0">
           <caret line="0" column="102" selection-start-line="0" selection-start-column="102" selection-end-line="0" selection-end-column="102" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daemons/rbhus_infra/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_details_updater.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#136#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rbhus_infra/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/db/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="e#135#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#135#144#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
