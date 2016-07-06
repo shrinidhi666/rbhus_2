@@ -1,0 +1,1 @@
+servers in this directory are meant to be run on the main network server
