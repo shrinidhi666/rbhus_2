@@ -18,7 +18,7 @@ setproctitle.setproctitle("web_api_server")
 cherrypy._cpserver.Server.thread_pool = 30
 class host_details(object):
   @cherrypy.expose
-  def index(self):
+  def details(self):
     details = {}
     details['cpu_usage_all'] = psutil.cpu_percent(interval=1,percpu=True)
     details['cpu_usage'] = psutil.cpu_percent(interval=1)
