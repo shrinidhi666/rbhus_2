@@ -1,0 +1,1 @@
+servers in this directory should run on all machines in the infrastructure regardless of machine types
