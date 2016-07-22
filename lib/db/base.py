@@ -71,3 +71,5 @@ if(__name__=='__main__'):
   test_conn = get_connection_base(database="rbhus_render",user="postgres",password="123",host="127.0.0.1",port="5432")
   rows = test_conn.execute("select * from host_details",dictionary=True)
   print (rows)
+  rows2 = test_conn.execute("select * from host_details where is_alive=%s",(False,), dictionary=True)
+  print(rows2)
