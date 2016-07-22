@@ -34,18 +34,20 @@ class get_connection_base(object):
         errstr = str(sys.exc_info())
         print(errstr)
         if(errstr.find("Connection refused") >= 0):
+          continue
+        else:
           return(False)
-          break
+        print("sleeping")
         time.sleep(1)
 
 
-  def execute(self,query,dictionary=False):
+  def execute(self,query,data=None,dictionary=False):
     if(self.__conn):
       while(True):
         rows = None
         try:
           cur = self.__conn.cursor()
-          cur.execute(query)
+          cur.execute(query,data)
           if(dictionary):
             rows = cur.fetchall()
           cur.close()
