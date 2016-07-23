@@ -15,6 +15,8 @@ import lib.common.system_utils
 
 def update_host_details_queue():
 	details = lib.common.system_utils.get_local_host_details()
+	details_list = details.keys()
+	insert_query = "insert into host_details (host_ip,host_name,cpu_total,cpu_used,ram_total,ram_used,is_alive,load_avg)"
 	
 
 
