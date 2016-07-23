@@ -14,7 +14,7 @@ import lib.db.base
 
 class get_connection(lib.db.base.get_connection_base):
   def __init__(self):
-    super(get_connection,self).__init__(database="rbhus_render",user="postgres",password="123",host="127.0.0.1",port="5432")
+    super(get_connection,self).__init__(database="rbhus_queue",user="postgres",password="123",host="127.0.0.1",port="5432")
 
 
 
