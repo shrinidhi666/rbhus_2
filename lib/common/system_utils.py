@@ -10,9 +10,12 @@ import os
 sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
 import simplejson
 import psutil
+import socket
 
 def get_local_host_details():
   details = {}
+  details['host_name'] = socket.gethostname()
+  details['host_ip'] = socket.gethostbyname(details['host_name'])
   details['cpu_usage_all'] = psutil.cpu_percent(interval=1,percpu=True)
   details['cpu_usage'] = psutil.cpu_percent(interval=1)
   details['memory'] = {'ram': psutil.virtual_memory(),'swap': psutil.swap_memory()}
@@ -20,3 +23,7 @@ def get_local_host_details():
     details['loadavg'] = os.getloadavg()
   details['disk'] = psutil.disk_partitions()  
   return(details)
+
+
+
+
