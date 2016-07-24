@@ -7,8 +7,9 @@ __email__ = "shrinidhi666@gmail.com"
 import sys
 import os
 sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
+import lib.common.debug
 import time
-
+import logging
 import psycopg2
 import psycopg2.extras
 
@@ -28,16 +29,16 @@ class get_connection_base(object):
       try:
         conn = psycopg2.connect(database=self.database,user=self.user,password=self.password,host=self.host,port=self.port,cursor_factory=psycopg2.extras.RealDictCursor)
         conn.autocommit = True
-        print("Opened database successfully")
+        logging.debug("Opened database successfully")
         return (conn)
       except:
         errstr = str(sys.exc_info())
-        print(errstr)
+        logging.debug(errstr)
         if(errstr.find("Connection refused") >= 0):
           continue
         else:
           return(False)
-        print("sleeping")
+        logging.debug("sleeping")
         time.sleep(1)
 
 
@@ -55,7 +56,7 @@ class get_connection_base(object):
         else:
           return(1)
       except:
-        print (str(sys.exc_info()))
+        logging.debug (str(sys.exc_info()))
         raise
 
 
@@ -63,13 +64,13 @@ class get_connection_base(object):
     if(self.__conn):
       try:
         self.__conn.close()
-        print ("Closed database connection")
+        logging.debug ("Closed database connection")
       except:
-        print (str(sys.exc_info()))
+        logging.debug (str(sys.exc_info()))
 
 if(__name__=='__main__'):
   test_conn = get_connection_base(database="rbhus_render",user="postgres",password="123",host="127.0.0.1",port="5432")
   rows = test_conn.execute("select * from host_details",dictionary=True)
-  print (rows)
+  logging.debug (rows)
   rows2 = test_conn.execute("select * from host_details where is_alive=%s",(False,), dictionary=True)
-  print(rows2)
+  logging.debug(rows2)

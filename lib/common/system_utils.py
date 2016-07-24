@@ -10,6 +10,7 @@ import os
 sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
 import lib.db.rbhus_queue
 import lib.db.rbhus_infra
+import lib.common.debug
 import simplejson
 import psutil
 import socket
@@ -123,12 +124,12 @@ class local_host(object):
 
     try:
       status2 = self.db_queue.execute(query_insert,(self.host_ip, self.host_name, self.cpu_total, self.mem_total, True, self.mem_used, ))
-      print ("insert code : " + unicode(status2))
+      logging.debug ("insert code : " + unicode(status2))
     except:
-      print (sys.exc_info())
+      logging.error (sys.exc_info())
 
     status1 = self.db_queue.execute(query_update, (self.cpu_total, self.mem_total, self.mem_used, self.loadavg, True, self.host_ip,))
-    print ("update code : " + unicode(status1))
+    logging.debug ("update code : " + unicode(status1))
 
 
 

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fce3e414-a79a-4434-b0a4-4833f8e94633" name="Default" comment="protoyping">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/common/debug.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/daemons/common/host_details_updater.py" afterPath="$PROJECT_DIR$/daemons/common/host_details_updater.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/common/system_utils.py" afterPath="$PROJECT_DIR$/lib/common/system_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/db/base.py" afterPath="$PROJECT_DIR$/lib/db/base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/db/rbhus_queue.py" afterPath="$PROJECT_DIR$/lib/db/rbhus_queue.py" />
     </list>
     <ignored path="rbhus_2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/db/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="870">
+              <caret line="58" column="16" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="e#135#145#0" expanded="true" />
               </folding>
@@ -56,21 +59,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="host_details_updater.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daemons/common/host_details_updater.py">
+      <file leaf-file-name="debug.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/common/debug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="117" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
+            <state relative-caret-position="120">
+              <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="system_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="host_details_updater.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daemons/common/host_details_updater.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="system_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/common/system_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1934">
-              <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+            <state relative-caret-position="1469">
+              <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -79,8 +92,18 @@
       <file leaf-file-name="rbhus_queue.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/db/rbhus_queue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="375">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rbhus_infra.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/db/rbhus_infra.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daemons/rbhus_infra/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,10 +176,11 @@
         <option value="$PROJECT_DIR$/lib/rbhus_infra/__init__.py" />
         <option value="$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py" />
         <option value="$PROJECT_DIR$/daemons/default/host_control_api_server.py" />
-        <option value="$PROJECT_DIR$/lib/db/rbhus_queue.py" />
         <option value="$PROJECT_DIR$/daemons/common/host_details_updater.py" />
-        <option value="$PROJECT_DIR$/lib/db/base.py" />
         <option value="$PROJECT_DIR$/lib/common/system_utils.py" />
+        <option value="$PROJECT_DIR$/lib/db/rbhus_queue.py" />
+        <option value="$PROJECT_DIR$/lib/db/base.py" />
+        <option value="$PROJECT_DIR$/lib/common/debug.py" />
       </list>
     </option>
   </component>
@@ -391,24 +405,7 @@
       <recent name="C:\CRAP\codungs\rbhus_2\lib\db" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.system_utils">
-    <configuration default="false" name="web_api_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin/web_api_server" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="rbhus_2" />
-      <option name="SCRIPT_NAME" value="C:\CRAP\codungs\rbhus_2\bin\web_api_server\host_control.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.host_details_updater">
     <configuration default="false" name="host_details" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -473,6 +470,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="rbhus_2" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/common/system_utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="host_details_updater" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/daemons/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="rbhus_2" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/daemons/common/host_details_updater.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -614,19 +628,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.lib.db.render" />
       <item index="1" class="java.lang.String" itemvalue="Python.server_base" />
-      <item index="2" class="java.lang.String" itemvalue="Python.web_api_server" />
-      <item index="3" class="java.lang.String" itemvalue="Python.host_details" />
-      <item index="4" class="java.lang.String" itemvalue="Python.host_control" />
-      <item index="5" class="java.lang.String" itemvalue="Python.host_control_api_server" />
-      <item index="6" class="java.lang.String" itemvalue="Python.system_utils" />
+      <item index="2" class="java.lang.String" itemvalue="Python.host_details" />
+      <item index="3" class="java.lang.String" itemvalue="Python.host_control" />
+      <item index="4" class="java.lang.String" itemvalue="Python.host_control_api_server" />
+      <item index="5" class="java.lang.String" itemvalue="Python.system_utils" />
+      <item index="6" class="java.lang.String" itemvalue="Python.host_details_updater" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.system_utils" />
-        <item index="1" class="java.lang.String" itemvalue="Python.host_control_api_server" />
-        <item index="2" class="java.lang.String" itemvalue="Python.host_control" />
-        <item index="3" class="java.lang.String" itemvalue="Python.host_details" />
-        <item index="4" class="java.lang.String" itemvalue="Python.web_api_server" />
+        <item index="0" class="java.lang.String" itemvalue="Python.host_details_updater" />
+        <item index="1" class="java.lang.String" itemvalue="Python.system_utils" />
+        <item index="2" class="java.lang.String" itemvalue="Python.host_control_api_server" />
+        <item index="3" class="java.lang.String" itemvalue="Python.host_control" />
+        <item index="4" class="java.lang.String" itemvalue="Python.host_details" />
       </list>
     </recent_temporary>
   </component>
@@ -868,7 +882,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469335220769</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="protoyping">
+      <created>1469336279268</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1469336279268</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers>
       <GitHub shared="false" url="https://github.com">
         <option name="assignedIssuesOnly" value="false" />
@@ -905,6 +926,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26285347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22072679" sideWeight="0.5070694" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19650067" sideWeight="0.4929306" order="2" side_tool="false" content_ui="tabs" x="164" y="367" width="1556" height="405" />
@@ -917,7 +939,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -942,7 +963,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/daemons/default/host_control_api_server.py" />
     <entry file="file://$PROJECT_DIR$/daemons/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1042,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/db/rbhus_infra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/db/rbhus_render.py" />
     <entry file="file://$PROJECT_DIR$/daemons/default/__init__.py" />
     <entry file="file://$PROJECT_DIR$/daemons/rbhus_infra/__init__.py">
@@ -1095,14 +1108,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/daemons/default/host_details_updater.py" />
-    <entry file="file://$PROJECT_DIR$/lib/db/rbhus_queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/rbhus_infra/rbhus_infra_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1120,27 +1125,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/daemons/common/host_details_updater.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="117" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
+        <state relative-caret-position="390">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/common/system_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1469">
+          <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/db/rbhus_infra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/common/debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/db/rbhus_queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/db/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state relative-caret-position="870">
+          <caret line="58" column="16" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="e#135#145#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/common/system_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1934">
-          <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

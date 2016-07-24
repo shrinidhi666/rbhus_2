@@ -10,6 +10,8 @@ import sys
 sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
 
 import lib.db.base
+import lib.common.debug
+import logging
 
 
 class get_connection(lib.db.base.get_connection_base):
@@ -22,7 +24,7 @@ if(__name__=='__main__'):
   test_conn = get_connection()
   if(test_conn):
     rows = test_conn.execute("select * from host_types",dictionary=True)
-    print (rows)
+    logging.debug (rows)
 
 
 

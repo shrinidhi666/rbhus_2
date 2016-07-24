@@ -11,12 +11,22 @@ sys.path.append(os.sep.join(os.path.abspath(__file__).split(os.sep)[:-3]))
 import lib.db.rbhus_queue
 import lib.db.rbhus_infra
 import lib.common.system_utils
+import lib.common.debug
+import time
+import logging
+
+def update_host_details():
+	local_host = lib.common.system_utils.local_host()
+	local_host.update()
 
 
-def update_host_details_queue():
-	details = lib.common.system_utils.get_local_host_details()
-	details_list = details.keys()
-	insert_query = "insert into host_details (host_ip,host_name,cpu_total,cpu_used,ram_total,ram_used,is_alive,load_avg)"
+if(__name__ == "__main__"):
+	while(True):
+		try:
+			update_host_details();
+		except:
+			logging.debug (sys.exc_info())
+		time.sleep(5)
 	
 
 
