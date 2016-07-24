@@ -149,7 +149,7 @@ if(__name__ == '__main__'):
   print(local_dets.host_ip)
   print (local_dets.cpu_used)
   print(local_dets.loadavg)
-  local_dets.cpu_used = 2
+  local_dets.cpu_used = 40
   print (local_dets.cpu_used)
   print (local_dets.is_enabled)
   local_dets.is_enabled = 0
