@@ -56,7 +56,7 @@ class get_connection_base(object):
           return(1)
       except:
         print (str(sys.exc_info()))
-        return (0)
+        raise
 
 
   def __del__(self):

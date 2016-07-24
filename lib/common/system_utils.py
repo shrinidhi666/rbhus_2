@@ -121,9 +121,12 @@ class local_host(object):
                    "(host_ip,host_name,cpu_total,mem_total,is_alive,mem_used) " \
                    "values (%s,%s,%s,%s,%s,%s)"
 
+    try:
+      status2 = self.db_queue.execute(query_insert,(self.host_ip, self.host_name, self.cpu_total, self.mem_total, True, self.mem_used, ))
+      print ("insert code : " + unicode(status2))
+    except:
+      print (sys.exc_info())
 
-    status2 = self.db_queue.execute(query_insert,(self.host_ip, self.host_name, self.cpu_total, self.mem_total, True, self.mem_used, ))
-    print ("insert code : " + unicode(status2))
     status1 = self.db_queue.execute(query_update, (self.cpu_total, self.mem_total, self.mem_used, self.loadavg, True, self.host_ip,))
     print ("update code : " + unicode(status1))
 
@@ -150,3 +153,4 @@ if(__name__ == '__main__'):
   print (local_dets.is_enabled)
   local_dets.is_enabled = 0
   local_dets.update()
+  local_dets.is_enabled = True
