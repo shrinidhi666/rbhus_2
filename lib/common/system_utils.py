@@ -91,6 +91,41 @@ class local_host(object):
     else:
       logging.error("boolean expected: True/False")
 
+  @property
+  def mem_total(self):
+    return (psutil.virtual_memory().total)
+
+  @mem_total.setter
+  def mem_total(self,value):
+    pass
+
+  @property
+  def mem_used(self):
+    return (psutil.virtual_memory().used)
+
+  @mem_used.setter
+  def mem_used(self,value):
+    pass
+
+
+  def update(self):
+    query_update = "update host_details set " \
+                   "cpu_total = %s ," \
+                   "mem_total = %s ," \
+                   "mem_used = %s ," \
+                   "loadavg = %s ," \
+                   "is_alive = %s " \
+                   "where host_ip = %s"
+
+    query_insert = "insert into host_details " \
+                   "(host_ip,host_name,cpu_total,mem_total,is_alive,mem_used) " \
+                   "values (%s,%s,%s,%s,%s,%s)"
+
+
+    status2 = self.db_queue.execute(query_insert,(self.host_ip, self.host_name, self.cpu_total, self.mem_total, True, self.mem_used, ))
+    print ("insert code : " + unicode(status2))
+    status1 = self.db_queue.execute(query_update, (self.cpu_total, self.mem_total, self.mem_used, self.loadavg, True, self.host_ip,))
+    print ("update code : " + unicode(status1))
 
 
 
@@ -101,22 +136,7 @@ class local_host(object):
 
 
 
-def get_local_host_details():
-  local_dets = local_host()
 
-  details = {}
-  details['host_name'] = socket.gethostname()
-  details['host_ip'] = local_dets.host_ip
-  details['cpu_usage_all'] = psutil.cpu_percent(interval=1,percpu=True)
-  details['cpu_usage'] = psutil.cpu_percent(interval=1)
-  details['memory'] = {'ram_total': psutil.virtual_memory(),'swap_total': psutil.swap_memory()}
-  if(sys.platform.lower().find("linux") >= 0):
-    details['loadavg'] = os.getloadavg()
-  details['disk'] = psutil.disk_partitions()
-  details['cpu_total'] = multiprocessing.cpu_count()
-
-
-  return(details)
 
 
 if(__name__ == '__main__'):
@@ -129,3 +149,4 @@ if(__name__ == '__main__'):
   print (local_dets.cpu_used)
   print (local_dets.is_enabled)
   local_dets.is_enabled = 0
+  local_dets.update()

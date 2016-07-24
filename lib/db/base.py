@@ -43,21 +43,21 @@ class get_connection_base(object):
 
   def execute(self,query,data=None,dictionary=False):
     if(self.__conn):
-      while(True):
-        rows = None
-        try:
-          cur = self.__conn.cursor()
-          cur.execute(query,data)
-          if(dictionary):
-            rows = cur.fetchall()
-          cur.close()
-          if(rows):
-            return(rows)
-          else:
-            return(1)
-        except:
-          print (str(sys.exc_info()))
-          time.sleep(1)
+      rows = None
+      try:
+        cur = self.__conn.cursor()
+        cur.execute(query,data)
+        if(dictionary):
+          rows = cur.fetchall()
+        cur.close()
+        if(rows):
+          return(rows)
+        else:
+          return(1)
+      except:
+        print (str(sys.exc_info()))
+        return (0)
+
 
   def __del__(self):
     if(self.__conn):
