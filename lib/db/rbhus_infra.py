@@ -23,9 +23,3 @@ if(__name__=='__main__'):
   if(test_conn):
     rows = test_conn.execute("select * from host_types",dictionary=True)
     print (rows)
-
-
-
-
-
-
